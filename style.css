@@ -1,0 +1,289 @@
+:root{
+    --primary-Cyan: hsl(179, 62%, 43%);
+    --primary-BrightYellow: hsl(71, 73%, 54%);
+    --neutral-LightGray: hsl(204, 43%, 93%);
+    --neutral-GrayishBlue: hsl(218, 22%, 67%);
+/* typography */
+    --ff: 'Karla', sans-serif;
+    --fs: 1rem;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+/* css reset rules */
+/* css reseting rules */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+html{
+    height: 100%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Make images easier to work with */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+body{
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw-400);
+
+    /* ensuring the footer is at the bottom of the body */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+figure{ 
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+figcaption{
+    font-size: 1.3rem;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+figcaption span{
+  
+  border-bottom: 2px solid orange;
+}
+nav ul .pro{
+  padding:0.2rem 0.5rem;
+  color: var(--neutral-LightGray);
+  background-color: var(--primary-Cyan);
+}
+nav{
+     
+      min-height: 42px;
+      padding-left: 1.5rem;
+      display: flex;
+      position: relative;
+      box-shadow: 0 3px 10px var(--neutral-LightGray);
+  
+}
+ul{
+   
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    top: 42px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 400px;
+    
+    opacity: 0;
+    background-color: var(--neutral-LightGray);
+    transition: all .5s ease-in-out;
+}
+ul li a{
+  position: relative;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* nav links hover effects */
+ul li a::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  transform: scale(0);
+  background-color: var(--primary-Cyan);
+  transition: all .5s ease-in-out;
+  
+}
+ul li a:hover::before{
+  
+  transform: scale(1);
+  
+}
+.fa-solid{
+  color: hsl(0, 0%, 10%);
+  opacity: 0.6;
+  font-size: 1.3rem;
+  
+}
+.profile-img{
+  width: 45px;
+  height: 45px;
+  
+ 
+}
+.profile-img img{
+  margin: .5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile-img figcaption {
+  font-size: 2rem;
+  transform: rotate(-90deg);
+  
+}
+/* styling hamburger menu */
+#check{
+  display: none;
+}
+.image_bars_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bars{
+  margin-left: 12rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#check:checked ~ section .bars{
+  border: 3px dotted rgb(202, 198, 198);
+}
+.bars span{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-Cyan);
+}
+.bars span::before, 
+.bars span::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-Cyan);
+  transition: .1s ease-in-out;
+}
+.bars span::before{
+top: 10px;
+}
+.bars span::after{
+bottom: 10px;
+}
+#check:checked ~ section .bars span::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+#check:checked ~ section .bars span::after{
+  transform: rotate(45deg);
+  top: 0;
+}
+#check:checked ~ section .bars span{
+  background-color: transparent;
+}
+#check:checked ~ ul{
+  opacity: 1;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 3px 10px hsl(0, 0%, 50%);
+  
+}
+/* styling footer to always stay at the bottom */
+footer{
+    padding: 2rem;
+    background-color: var(--primary-Cyan);
+    /* pushing the footer to the bottom */
+    margin-top: auto;
+}
+.attribution { 
+   
+    text-align: center;
+    font-size: var(--fs);
+    font-weight: var(--fw-700);
+    color: white;
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/* Styling the single grid component for mobile*/
+
+
+
+
+
+@media(min-width:980px){
+  /* hide the hamburger menu */
+  .bars{
+    display: none;
+  }
+  /* nav link display row */
+  ul{
+    flex-direction: row;
+    /* top: -180px; */
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    margin-left: 400px;
+    z-index: -1;
+  }
+
+  nav{
+    min-height: 80px;
+    z-index: 1;
+  }
+
+
+  /* Styling the single grid component for desktops */
+
+
+}
