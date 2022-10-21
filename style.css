@@ -1,5 +1,6 @@
 :root{
     --primary-Cyan: hsl(179, 62%, 43%);
+    --primary-Cyan-2: hsl(179, 62%, 53%);
     --primary-BrightYellow: hsl(71, 73%, 54%);
     --neutral-LightGray: hsl(204, 43%, 93%);
     --neutral-GrayishBlue: hsl(218, 22%, 67%);
@@ -68,9 +69,10 @@ body{
     font-family: var(--ff);
     font-size: var(--fs);
     font-weight: var(--fw-400);
-
+    background-color: var(--neutral-LightGray);
     /* ensuring the footer is at the bottom of the body */
     min-height: 100%;
+  
     display: flex;
     flex-direction: column;
 }
@@ -99,8 +101,10 @@ nav{
       padding-left: 1.5rem;
       display: flex;
       position: relative;
-      box-shadow: 0 3px 10px var(--neutral-LightGray);
-  
+      background-color: white;
+      box-shadow: 0 3px 10px white;
+      
+     
 }
 ul{
    
@@ -117,7 +121,6 @@ ul{
     height: 400px;
     
     opacity: 0;
-    background-color: var(--neutral-LightGray);
     transition: all .5s ease-in-out;
 }
 ul li a{
@@ -229,7 +232,7 @@ bottom: 10px;
 #check:checked ~ ul{
   opacity: 1;
     width: 100%;
-    background-color: transparent;
+    background-color: var(--neutral-LightGray);
     box-shadow: 0 3px 10px hsl(0, 0%, 50%);
   
 }
@@ -252,7 +255,77 @@ footer{
 }
 /* Styling the single grid component for mobile*/
 
+main{
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article{
+ 
+  padding: 3rem 2.5rem;
+  
+}
+article h1, h3, h2{
+  margin-bottom: 1.5rem;
+}
+article h3{
+  color: var(--neutral-LightGray);
+}
+.join p{
+    line-height: 2;
+    color: var(--neutral-GrayishBlue);
+}
+article h1{
+  color: var(--primary-Cyan);
+}
+article h2{
+  color: var(--primary-BrightYellow);
+}
+.price{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+  color: var(--neutral-LightGray);
+}
+.price span{
+  font-size: var(--fs);
+  font-weight: var(--fw-700);
+  color: var(--primary-Cyan-2);
+}
+.flex-row p{
+  color: var(--neutral-LightGray);
+}
+.flex-row button{
+  margin-top: 1rem;
+  padding: .5em 4.3em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  color: var(--neutral-LightGray);
+  background-color: var(--primary-BrightYellow);
+}
+.join p{
+  
+}
+.why-us p{
+  width: 60%;
+}
+.card-container-wrapper{
+  max-width: 80%;
+}
 
+.join{
+  background-color: white;
+  margin-top: 2rem;
+}
+.subscription{
+  background-color: var(--primary-Cyan);
+}
+.why-us{
+  margin-bottom: 1rem;
+  background-color: var(--primary-Cyan-2);
+}
 
 
 
@@ -284,6 +357,17 @@ footer{
 
 
   /* Styling the single grid component for desktops */
-
+.flex-row{
+  display: flex;
+  width: 45em;
+ 
+}
+article{
+  
+  width: 45em;
+}
+.join p{
+    width: 90%;
+}
 
 }
