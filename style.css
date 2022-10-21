@@ -140,7 +140,7 @@ ul li a::before{
   right: 0;
   transform: scale(0);
   background-color: var(--primary-Cyan);
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
   
 }
 ul li a:hover::before{
