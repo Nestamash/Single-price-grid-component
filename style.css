@@ -98,7 +98,7 @@ nav ul .pro{
 nav{
      
       min-height: 42px;
-      padding-left: 1.5rem;
+      /* padding-left: 1.5rem; */
       display: flex;
       position: relative;
       background-color: white;
@@ -305,9 +305,6 @@ article h2{
   color: var(--neutral-LightGray);
   background-color: var(--primary-BrightYellow);
 }
-.join p{
-  
-}
 .why-us p{
   width: 60%;
 }
@@ -323,12 +320,10 @@ article h2{
   background-color: var(--primary-Cyan);
 }
 .why-us{
-  margin-bottom: 1rem;
+  
   background-color: var(--primary-Cyan-2);
 }
-
-
-
+/* desktop layout */
 @media(min-width:980px){
   /* hide the hamburger menu */
   .bars{
@@ -339,20 +334,25 @@ article h2{
     flex-direction: row;
     /* top: -180px; */
     top: 0;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     opacity: 1;
     overflow: hidden;
     width: 100%;
     height: auto;
     background-color: transparent;
-    margin-left: 400px;
     z-index: -1;
+  }
+  ul li:last-child{
+    margin-right: 4rem;
   }
 
   nav{
     min-height: 80px;
     z-index: 1;
+  }
+  .image_bars_container img{
+    margin-left: 2rem;
   }
 
 
@@ -363,11 +363,10 @@ article h2{
  
 }
 article{
-  
+  flex: 1;
   width: 45em;
 }
 .join p{
     width: 90%;
 }
-
 }
